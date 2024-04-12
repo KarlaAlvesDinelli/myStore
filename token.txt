@@ -1,0 +1,5 @@
+userId: "638380c9d652a3cacd4409ce"
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJJZCI6IjYzODM4MGM5ZDY1MmEzY2FjZDQ0MDljZSIsImlhdCI6MTcwMDgyNTkyMCwiZXhwIjoxNzAwODI5NTIwfQ.8C3QpPahVufCiAP5QrOgmHrty6ri6bLxGv1i68ND2Ds"
+*****************
+email: "admin@admin.com"
+password: "12345"

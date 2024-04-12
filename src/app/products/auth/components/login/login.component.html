@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="login d-flex align-items-center justify-content-center mt-8">
+    <div
+      class="card d-flex align-items-center justify-content-center pt-5 pb-5"
+    >
+      <form [formGroup]="loginForm">
+        <div class="d-flex align-items-center mb-3 pb-1">
+          <i
+            class="fas fa-store"
+            style="color: rgb(69, 88, 255); font-size: 40px"
+          ></i>
+          <span class="h1 fw-bold mb-0 ml-2">Ploxys Store</span>
+        </div>
+
+        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+          Entre na sua conta !
+        </h5>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Email</label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control form-control-lg"
+            [readOnly]="isLoading"
+          />
+        </div>
+
+        <div class="form-outline mb-4">
+          <label class="form-label">Senha</label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control form-control-lg"
+            [readOnly]="isLoading"
+          />
+        </div>
+
+        <div class="pt-1 mb-4">
+          <button
+            (click)="login()"
+            class="btn btn-primary btn-lg"
+            style="width: 100%"
+            type="button"
+            [disabled]="isLoading"
+          >
+            Login <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

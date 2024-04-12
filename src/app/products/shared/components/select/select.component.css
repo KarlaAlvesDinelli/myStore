@@ -1,0 +1,11 @@
+:host >>> .product-form .p-component {
+  width: 100%;
+}
+
+:host >>> .p-button-secondary {
+  margin: 10px;
+}
+
+td img {
+  border-radius: 10px;
+}

@@ -1,0 +1,81 @@
+<p-dialog
+  header="{{ modalType }} Produto"
+  [(visible)]="displayAddEditModal"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  (onHide)="closeModal()"
+>
+  <form [formGroup]="productForm" class="product-form">
+    <div class="field">
+      <label class="block" for="title">Produto</label>
+      <input type="text" pInputText id="title" formControlName="title" />
+      <small
+        class="p-error block"
+        *ngIf="
+          productForm.controls['title'].invalid &&
+          productForm.controls['title'].dirty
+        "
+        >Field is required</small
+      >
+    </div>
+    <div class="field">
+      <label class="block" for="price">Preço</label>
+      <p-inputNumber
+        id="price"
+        formControlName="price"
+        class="block"
+      ></p-inputNumber>
+      <small
+        class="p-error block"
+        *ngIf="
+          productForm.controls['price'].invalid &&
+          productForm.controls['price'].dirty
+        "
+        >Field is required</small
+      >
+    </div>
+    <div class="field">
+      <label class="block">Descrição</label>
+      <textarea pInputTextarea formControlName="description"></textarea>
+    </div>
+    <div class="field">
+      <label class="block" for="image">Imagem</label>
+      <input type="file" pInputText id="image" formControlName="image" />
+      <small
+        class="p-error block"
+        *ngIf="
+          productForm.controls['image'].invalid &&
+          productForm.controls['image'].dirty
+        "
+        >Field is required</small
+      >
+    </div>
+    <div class="field">
+      <label class="block" for="category">Categoria</label>
+      <input type="text" pInputText id="category" formControlName="category" />
+      <small
+        class="p-error block"
+        *ngIf="
+          productForm.controls['category'].invalid &&
+          productForm.controls['category'].dirty
+        "
+        >Field is required</small
+      >
+    </div>
+  </form>
+  <ng-template pTemplate="footer">
+    <p-button
+      (click)="closeModal()"
+      label="Cancelar"
+      styleClass="p-button-text p-button-secondary p-button-rounded"
+    ></p-button>
+
+    <p-button
+      (click)="addEditProduct()"
+      label="{{ modalType }}"
+      styleClass=" p-button-primary"
+    ></p-button>
+  </ng-template>
+</p-dialog>

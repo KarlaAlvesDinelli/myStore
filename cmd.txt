@@ -1,0 +1,3 @@
+
+npm install primeng primeicons primeflex --save
+npm install
