@@ -1,11 +1,21 @@
 <div class="container">
   <div class="flex justify-content-between">
     <h2 class="m-5">Produtos</h2>
-    <p-button
-      label="Adicionar Novo Produto"
-      styleClass="p-button-primary m-5 "
-      (click)="showAddModal()"
-    ></p-button>
+    <div class="d-flex align-items-center">
+      <button
+        type="button"
+        class="btn btn-outline-primary mr-3"
+        routerLink="/products"
+      >
+        Voltar
+      </button>
+      <p-button
+        label="Adicionar Novo Produto"
+        styleClass="p-button-primary"
+        (click)="showAddModal()"
+      >
+      </p-button>
+    </div>
   </div>
   <p-table [value]="products" [paginator]="true" [rows]="5">
     <ng-template pTemplate="header">
