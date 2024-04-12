@@ -3,3 +3,6 @@ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSI
 *****************
 email: "admin@admin.com"
 password: "12345"
+
+
+Informações para logar !
